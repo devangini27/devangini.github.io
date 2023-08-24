@@ -15,6 +15,9 @@
             height: inherit;
             width: inherit;
         }
+        .progress-bar {
+            color:blue;
+        }
     </style>
 <body>
 <h1>Collaboratec Usecases</h1>
@@ -28,6 +31,9 @@ In this project, models and jewellery pieces were digitized to create immersive 
 <h3>Wooden bracelet scanned with Matter and Form</h3>
 <div class="model_loader">
     <model-viewer src="https://devangini27.github.io/model/wooden_bracelet.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="model/wooden_bracelet.png" shadow-intensity="1"  exposure="2">
+        <div class="progress-bar" slot="progress-bar">
+        <div class="update-bar"></div>
+        </div>
     </model-viewer>
 </div>
 <h3>Wooden bracelet scanned with Artec Leo</h3>
