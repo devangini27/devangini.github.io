@@ -4,19 +4,31 @@
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
+    <style>
+        .model_loader{
+            height: 50vh;
+            width: 50vw;
+        }
+        model-viewer{
+            height: inherit;
+            width: inherit;
+        }
+    </style>
 <body>
 <h1>Scanned jewellery</h1>
-<model-viewer src="https://devangini27.github.io/model/wooden_bracelet.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="model/wooden_bracelet.png" shadow-intensity="1" environment-image="image/music_hall_01_4k.exr" exposure="1.53">
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
+    <div class="model_loader">
+        <model-viewer src="https://devangini27.github.io/model/wooden_bracelet.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="model/wooden_bracelet.png" shadow-intensity="1" environment-image="image/music_hall_01_4k.exr" exposure="1.53">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
+        </model-viewer>
     </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-    </div>
-</model-viewer>
 
   
 </body>
