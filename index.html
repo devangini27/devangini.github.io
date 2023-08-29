@@ -20,6 +20,7 @@
             color:blue;
         }
     </style>
+    
 <body>
     <div class="container">
         <h1 class="display-1">Collaboratec Usecases</h1>
@@ -53,25 +54,39 @@
         </div>
         <h3>4. Fashion tryon demo</h3>
         <div class="model_loader">
-            <model-viewer src="https://devangini27.github.io/model/actor.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="model/actor.png" shadow-intensity="1"  exposure="1">
+            <model-viewer id="actor" src="https://devangini27.github.io/model/actor.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="model/actor.png" shadow-intensity="1"  exposure="1">
                 <div class="progress-bar" slot="progress-bar">
                 <div class="update-bar"></div>
                 </div>
             </model-viewer>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked onclick="changeJewellery(0);>
           <label class="form-check-label" for="flexCheckChecked">
             With the wooden bracelet
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked onclick="changeJewellery(1);>
           <label class="form-check-label" for="flexCheckChecked">
             With aloe piece
           </label>
         </div>
     </div>
+    <script type="module">
 
+        const modelViewer = document.querySelector("model-viewer#actor");
+        var materials = ["material_0", "main"];
+
+        function changeJewellery(index){
+
+            const material = modelViewer.getMaterialByName(materials[index]);
+            if (material != null) {
+              material.pbrMetallicRoughness.
+                setBaseColorFactor([Math.random(), Math.random(), Math.random()]);
+            }
+
+        }
+</script>
 </body>
 </html>
