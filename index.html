@@ -83,8 +83,10 @@
         function changeJewellery(index){
 
          
-            //if(! document.getElementById('checkbox' + index).checked) 
-                     
+            if(! document.getElementById('checkbox' + index).checked) 
+                modelViewer.model.getMaterialByName(materials[index]).setAlphaMode('MASK');
+            else
+                modelViewer.model.getMaterialByName(materials[index]).setAlphaMode('OPAQUE');
             
 
         }
