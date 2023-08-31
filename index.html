@@ -22,6 +22,8 @@
 	    
 	    	import * as THREE from 'three';
 		window.THREE = THREE;
+		import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+		var controls;
 	    	
 	        // Example based from https://github.com/MantisVision/webUtils/tree/f5393e93f08c171e12eb03f4f69d0305c79e6572/samples/standalone
 
@@ -46,6 +48,8 @@
 				camera.position.set(0, 1.5, 2.2);
 				camera.lookAt(0, 1.0, 0);
 				cameraRigY.add(camera);
+
+				controls = new OrbitControls( camera, renderer.domElement );
 		
 				viewport.appendChild(renderer.domElement);
 				run(renderer,scene,camera);
@@ -109,6 +113,8 @@
 				{
 					ryskObj.update();
 				}
+
+				controls.update();
 				
 				renderer.clear(true, true, true);
 				renderer.render(scene, camera);
