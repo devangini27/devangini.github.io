@@ -210,7 +210,18 @@
           </label>
         </div>
     </div>
-    <script type="module">
+    
+	<h3>5. Immersive marketing video for metaverse platforms</h3>
+	<div id="viewport">
+		<button id="play">Play</button>
+		<div id="playbackratediv">
+			<label for="playbackrate">Playback rate:</label><br />
+			<input id="playbackrate" type="range" min="0.07" max="1.0" step="0.01" value="1.0" />
+		</div>
+		<progress id="progress" value="0" min="0"></progress>
+	
+	</div>
+	<script type="module">
 
         const modelViewer = document.querySelector("model-viewer#actor");
         var materials = ["material_0", "main"];
@@ -228,15 +239,5 @@
 
         }
 	</script>
-	<h3>5. Immersive marketing video for metaverse platforms</h3>
-	<div id="viewport">
-		<button id="play">Play</button>
-		<div id="playbackratediv">
-			<label for="playbackrate">Playback rate:</label><br />
-			<input id="playbackrate" type="range" min="0.07" max="1.0" step="0.01" value="1.0" />
-		</div>
-		<progress id="progress" value="0" min="0"></progress>
-	
-	</div>
 </body>
 </html>
