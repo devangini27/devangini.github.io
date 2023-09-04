@@ -181,44 +181,13 @@
                 </div>
             </model-viewer>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="checkbox0" checked onclick="changeJewellery(0);">
-          <label class="form-check-label" for="flexCheckChecked">
-            With the wooden bracelet
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="checkbox1" checked onclick="changeJewellery(1);">
-          <label class="form-check-label" for="flexCheckChecked">
-            With aloe piece
-          </label>
-        </div>
+        
         <h3>5. Immersive marketing video for metaverse platforms</h3>
 		<div id="viewport">
 			<button id="play">Play</button>
 		</div>
-        
-        
     </div>
     
-	
-	<script type="module">
 
-        const modelViewer = document.querySelector("model-viewer#actor");
-        var materials = ["material_0", "main"];
-        var defaultBaseColours = [];
-        
-
-        function changeJewellery(index){
-
-         
-            if(! document.getElementById('checkbox' + index).checked) 
-                modelViewer.model.getMaterialByName(materials[index]).setAlphaMode('MASK');
-            else
-                modelViewer.model.getMaterialByName(materials[index]).setAlphaMode('OPAQUE');
-            
-
-        }
-	</script>
 </body>
 </html>
